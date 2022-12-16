@@ -1,0 +1,3 @@
+{"pluginName":"PushPanda - Web Push",
+"pluginDescription":"Easly integrate PushPanda.io Web Push Notifications in your Craft CMS website.",
+"pluginVersion":"1.0.0","pluginAuthorName":"PushPanda","pluginVendorName":"PushPanda.io","pluginAuthorUrl":"https://www.pushpanda.io","pluginAuthorGithub":"pushpandahq","codeComments":"yes","pluginComponents":["controllers","models","services","settings","tests","variables"],"consolecommandName":"","controllerName":"","cpsectionName":"","elementName":"","fieldName":"","modelName":"PushPanda","purchasableName":"","recordName":"","serviceName":"","taskName":"","utilityName":"","widgetName":"","apiVersion":"api_version_3_0"}

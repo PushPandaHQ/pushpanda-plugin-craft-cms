@@ -1,0 +1,59 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * PushPanda - Web Push plugin for Craft CMS 3.x
+ *
+ * PushPanda - Web Push Settings.twig
+ *
+ * @author    AK
+ * @copyright Copyright (c) 2022 AK
+ * @link      https://www.pushpanda.io
+ * @package   PushpandaWebPush
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{% set first = true %}
+
+{% if sites|length > 0 %}
+    {% for site in sites %}
+        {% if first == false %}<hr>{% endif %}
+        <h2 {% if first %}class="first"{% endif %}>{{ 'Settings for {site}'|t('gtag', {site:site.name}) }}</h2>
+        <p>
+            If you already have a PushPanda.io Account get your <a href="https://app.pushpanda.io/websites" target="_blank">Project ID here</a>, otherwise register for a <a href="https://app.pushpanda.io/register" target="_blank">free trial account</a>.
+        </p>
+        {{ forms.textField({
+            label: 'Project ID',
+            instructions: 'Enter a valid PushPanda.io Project ID for this website.',
+            name: 'projectId[' ~ site.uid ~ ']',
+            value: settings.getProjectId(site),
+            size: 80
+            })
+        }}
+        {{ forms.textField({
+            label: 'Service Worker Directory',
+            instructions: 'Directory for published PushPanda.io Service Worker script.',
+            name: 'serviceWorker[' ~ site.uid ~ ']',
+            value: settings.getServiceWorker(site),
+            size: 80,
+            readonly: true,
+            disabled: true
+        })
+        }}
+
+        <p>Click <a href="{{ settings.getServiceWorker(site) }}PushPandaWorker.js" target="_blank">HERE</a> to test the PushPanda.io ServiceWorker URL for this website.</p>
+
+        {{ forms.lightswitchField({
+            label: 'Enable PushPanda.io on website',
+            name: 'isActive[' ~ site.uid ~ ']',
+            on: settings.getIsActive(site),
+            })
+        }}
+
+        {% set first = false %}
+    {% endfor %}
+{% else %}
+    <p>{{ 'Add a site before changing PushPanda.io settings' }}
+{% endif %}

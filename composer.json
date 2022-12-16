@@ -1,0 +1,41 @@
+{
+  "name": "pushpanda/craft-pushpanda",
+  "description": "Easly integrate PushPanda.io Web Push Notifications in your Craft CMS website.",
+  "minimum-stability": "stable",
+  "type": "craft-plugin",
+  "version": "1.0.0",
+  "license": "MIT",
+  "keywords": ["craft", "craftcms", "cms", "craft-plugin", "pushpanda", "web-push", "notifications"],
+  "authors": [
+    {
+      "name": "PushPanda.io",
+      "email": "hi@pushpanda.io"
+    }
+  ],
+  "support": {
+    "email": "support@pushpanda.io",
+    "issues": "https://github.com/PushPandaHQ/pushpanda-plugin-craft-cms/issues?state=open",
+    "source": "https://github.com/PushPandaHQ/pushpanda-plugin-craft-cms",
+    "docs": "https://github.com/PushPandaHQ/pushpanda-plugin-craft-cms/blob/master/README.md"
+  },
+  "require": {
+    "craftcms/cms": "^4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "pushpandaio\\pushpandawebpush\\": "src/"
+    }
+  },
+  "extra": {
+    "name": "PushPanda.io - Web Push Notifications",
+    "handle": "pushpanda-web-push",
+    "developer": "PushPanda.io",
+    "developerUrl": "https://www.pushpanda.io",
+    "documentationUrl": "https://github.com/pushpandahq/pushpanda-plugin-craft-cms/blob/main/README.md",
+    "changelogUrl": "https://raw.githubusercontent.com/pushpandahq/pushpanda-plugin-craft-cms/main/CHANGELOG.md",
+    "components": {
+      "pushPandaService": "pushpandaio\\pushpandawebpush\\services\\PushPandaService"
+    },
+    "class": "pushpandaio\\pushpandawebpush\\PushPanda"
+  }
+}
