@@ -9,7 +9,7 @@ class WorkerBundle extends AssetBundle
     public function init()
     {
         // define the path that your publishable resources live
-        $this->sourcePath = __DIR__ . '/resources';
+        $this->sourcePath = '@pushpandaio/pushpandawebpush/resources';
 
         // define the dependencies
         $this->depends = [
@@ -18,9 +18,9 @@ class WorkerBundle extends AssetBundle
 
         // define the relative path to CSS/JS files that should be registered with the page
         // when this asset bundle is registered
-        $this->js = [
-            //'PushPandaWorker.js',
-        ];
+        /*$this->js = [
+            'PushPandaWorker.js',
+        ];*/
 
         parent::init();
     }

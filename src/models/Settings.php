@@ -60,7 +60,7 @@ class Settings extends Model
         } else {
             //get sw url from assets
             $url = \Craft::$app->assetManager->getPublishedUrl(
-                __DIR__ . './../resources/PushPandaWorker.js',
+                '@pushpandaio/pushpandawebpush/resources/PushPandaWorker.js',
                 true
             );
             return str_replace("PushPandaWorker.js","", parse_url($url, PHP_URL_PATH));
