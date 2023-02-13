@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 1.0.2 - 2023-02-13
+### Fixed
+- Removed unused AssetBundle
+
 ## 1.0.1 - 2023-02-13
 ### Fixed
 - Fixed directory handling for serviceworker

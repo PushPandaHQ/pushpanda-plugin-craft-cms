@@ -3,7 +3,7 @@
   "description": "Easly integrate PushPanda.io Web Push Notifications in your Craft CMS website.",
   "minimum-stability": "stable",
   "type": "craft-plugin",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "keywords": ["craft", "craftcms", "cms", "craft-plugin", "pushpanda", "web-push", "notifications"],
   "authors": [
